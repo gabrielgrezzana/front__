@@ -18,10 +18,10 @@ function Filters({ onFilterChange }: FiltersProps) {
             <Box width={'33%'} onClick={() => handleFilterClick('todos')} borderBottomWidth={selectedFilter === 'todos' ? 2 : 0} borderBottomColor={'orange'}>
                 <Text textAlign={'center'} fontSize={'16px'} fontWeight={'bold'} color={'#000'} fontFamily={'Poppins'}>TODOS PRODUTOS</Text>
             </Box>
-            <Box width={'33%'} onClick={() => handleFilterClick('camisetas')} borderBottomWidth={selectedFilter === 'camisetas' ? 2 : 0} borderBottomColor={'orange'}>
+            <Box width={'33%'} onClick={() => handleFilterClick('camiseta')} borderBottomWidth={selectedFilter === 'camiseta' ? 2 : 0} borderBottomColor={'orange'}>
                 <Text textAlign={'center'} fontSize={'16px'} fontWeight={'bold'} color={'#000'} fontFamily={'Poppins'}>CAMISETAS</Text>
             </Box>
-            <Box width={'33%'} onClick={() => handleFilterClick('canecas')} borderBottomWidth={selectedFilter === 'canecas' ? 2 : 0} borderBottomColor={'orange'}>
+            <Box width={'33%'} onClick={() => handleFilterClick('caneca')} borderBottomWidth={selectedFilter === 'caneca' ? 2 : 0} borderBottomColor={'orange'}>
                 <Text textAlign={'center'} fontSize={'16px'} fontWeight={'bold'} color={'#000'} fontFamily={'Poppins'}>CANECAS</Text>
             </Box>
         </Box>

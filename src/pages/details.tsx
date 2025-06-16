@@ -3,17 +3,27 @@ import { Box, Text, Image, Button, Spacer } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import type { Product } from "../mocks/data.info";
 import { products } from "../mocks/data.info";
+import { useNavigate } from "react-router-dom";
 
 
 function Details() {
     const { id } = useParams();
     const product = products.find((product: Product) => product.id === Number(id));
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate('/');
+    }
 
     return (
         <Page onSearch={() => {}}>
-            <Box width={'100%'} height={'90%'} display={'flex'} flexDirection={'row'} alignItems={'center'} justifyContent={'center'}>
+            <Box width={'100%'} height={'90%'} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
+                <Box width={'90%'} height={'10%'} display={'flex'} flexDirection={'row'} alignItems={'center'} justifyContent={'flex-start'}>
+                    <Button bg={'#fff'} color={'#000'} borderRadius={10} onClick={() => handleNavigate()}>Voltar</Button>
+                </Box>
                 <Box width={'90%'} height={'80%'} display={'flex'} bg='#f0f0f5' borderRadius={10}>
-                    <Box width={'50%'} height={'100%'}>
+                    
+                    <Box width={'50%'} height={'100%'}>                    
                         <Image src={product?.image} alt={product?.name} width={'100%'} height={'100%'} borderRadius={10}/>
                     </Box>
                     <Box width={'50%'} height={'100%'} justifyContent={'space-around'} display={'flex'} flexDirection={'column'} padding={10}>
